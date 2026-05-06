@@ -1,56 +1,32 @@
 import { useState } from "react";
 import axios from "axios";
+import LogIn from "./Pages/login";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+import Home from "./Pages/home";
+import Account from "./Pages/account";
+import Product from "./Pages/product";
 
 function App() {
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
-
-  const register = async () => {
-    const res = await axios.post("http://localhost:5000/auth/register", {
-      email,
-      password
-    });
-
-    setMessage(res.data);
-  };
-
-  const login = async () => {
-    const res = await axios.post("http://localhost:5000/auth/login", {
-      email,
-      password
-    });
-
-    setMessage(res.data);
-  };
-
   return (
-    <div style={{ padding: "20px" }}>
+    <BrowserRouter>
 
-      <h1>MERN Login System</h1>
+      <nav>
+        <Link to="/">Home</Link> |
+        <Link to="/product">Product</Link> |
+        <Link to="/login">LogIn</Link> |
+        <Link to="/account">Account</Link>
+      </nav>
 
-      <input
-        placeholder="Email"
-        onChange={(e) => setEmail(e.target.value)}
-      />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/account" element={<Account />} />
+      </Routes>
 
-      <br /><br />
-
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-
-      <br /><br />
-
-      <button onClick={register}>Register</button>
-      <button onClick={login}>Login</button>
-
-      <h3>{message}</h3>
-
-    </div>
+    </BrowserRouter>
   );
 }
 
