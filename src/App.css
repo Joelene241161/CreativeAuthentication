@@ -40,3 +40,52 @@
 .imagePlaceholder {
   width:40%;
 }
+
+.logInBox {
+  display: flex ;
+  justify-content: center;
+  background-color: #EFEBEA;
+  margin: 1%;
+  padding: 3%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.logInBack {
+  margin: 3%;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.logInButtonImg{
+  border-radius: 5px;
+  max-width: 60%;
+  margin-top:5%;
+  margin-bottom:3%;
+  border:#EFEBEA;
+  border-width: 1px;
+}
+
+.logInButton{
+  margin: 1%;
+  padding: 0%;
+  background-color: #EFEBEA;
+  border-color: #7B593F;
+  border-width: 2px;
+  border-radius: 15px;
+}
+
+.logInButton:hover {
+  background-color: #7B593F;
+  color: white;
+}
+
+.progressBar{
+  color: #7B593F;
+}
+
+.loginPagination{
+  display: flex ;
+  justify-content: center;
+  padding: 2%;
+}

@@ -1,8 +1,17 @@
 import { useState } from "react";
 import axios from "axios";
+import ToggleButton from 'react-bootstrap/ToggleButton';
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+
+import Authentication from "../Components/authentication";
+
 
 function LogIn() {
-
+  const [name, setName] = useState('');
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -10,7 +19,8 @@ function LogIn() {
   const register = async () => {
     const res = await axios.post("http://localhost:5000/auth/register", {
       email,
-      password
+      password,
+      name
     });
 
     setMessage(res.data);
@@ -19,38 +29,23 @@ function LogIn() {
   const login = async () => {
     const res = await axios.post("http://localhost:5000/auth/login", {
       email,
-      password
+      password,
+      name
     });
 
     setMessage(res.data);
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="logInBack" >
+        <div className="logInBox">
+          <div type="col">
 
-      <h1>MERN Login System</h1>
+          <Authentication/>
 
-      <input
-        placeholder="Email"
-        onChange={(e) => setEmail(e.target.value)}
-      />
-
-      <br /><br />
-
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-
-      <br /><br />
-
-      <button onClick={register}>Register</button>
-      <button onClick={login}>Login</button>
-
-      <h3>{message}</h3>
-
-    </div>
+              </div>
+          </div>
+      </div>
   );
 }
 
