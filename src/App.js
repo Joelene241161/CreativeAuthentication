@@ -1,37 +1,36 @@
-<<<<<<< Updated upstream
-import logo from './logo.svg';
-import './App.css';
-=======
 import './App.css';
 import { useState } from "react";
 import axios from "axios";
 import LogIn from "./Pages/login";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css';
 
 import Home from "./Pages/home";
 import Account from "./Pages/account";
 import Product from "./Pages/product";
->>>>>>> Stashed changes
+import Seller from "./Pages/seller";
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+
+      <nav>
+        <Link to="/">Home</Link> |
+        <Link to="/product">Product</Link> |
+        <Link to="/seller">Seller</Link> |
+        <Link to="/login">LogIn</Link> |
+        <Link to="/account">Account</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/seller" element={<Seller />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/account" element={<Account />} />
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
