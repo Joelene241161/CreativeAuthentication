@@ -2,39 +2,60 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.m-plus-rounded-1c-thin {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.m-plus-rounded-1c-light {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.m-plus-rounded-1c-regular {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.App-link {
-  color: #61dafb;
+.m-plus-rounded-1c-medium {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.m-plus-rounded-1c-bold {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.m-plus-rounded-1c-extrabold {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.m-plus-rounded-1c-black {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.inter-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .imagePlaceholder {
@@ -88,4 +109,156 @@
   display: flex ;
   justify-content: center;
   padding: 2%;
+}
+
+.heroImage{
+  background-image: url('Assets/images/Hero header.png');
+  max-height: 90%;
+  max-width: 100%;
+}
+
+.herotext{
+  padding-top: 15%;
+  font-size: 315%;
+  color: white;
+}
+
+.herocard{
+  font-size: 18px;
+  color: white;
+  background-color: #716a65de;
+  border-color: white;
+  border-style:solid;
+  border-radius: 17px;
+  border-width: 1px;
+  padding:2%;
+  width: 80%;
+}
+
+.herocard:hover{
+  filter: drop-shadow(3px 3px #3C2717);
+  background-color: #716a65de;
+}
+
+.marginBody{
+  margin-left:13%;
+}
+
+.primaryButton{
+  margin: 1%;
+  padding: 1.2%;
+  background-color: #ffffff;
+  border-color: #7B593F;
+  border-width: 2px;
+  border-radius: 15px;
+  padding-left: 0%;
+}
+
+.primaryButton:hover {
+  background-color: #7B593F;
+  color: white;
+}
+
+.buttontext {
+  font-size: 16px;
+  padding-left: 2%;
+  color: #7B593F;
+  text-decoration: none;
+}
+
+.joinButton{
+  width:25%;
+  padding-left: 3%;
+}
+
+.circularText{
+  padding-top: 35%;
+  width: 80%;
+  padding-left: 50%;
+  padding-bottom: 10%;
+}
+
+nav{
+  padding: 1.5%;
+  padding-left: 8%;
+   background-image: url('Assets/images/Nav image.png');
+}
+
+.logoStyling{
+  width: 13%;
+}
+
+.logoStyling:hover{
+  filter: drop-shadow(2px 2px #7B593F);
+}
+
+.iconStyling{
+  width:2.5%;
+  padding-right: 0.5%;
+  min-width: 20px;
+}
+
+.pagelinks{
+  text-decoration: none;
+  color: white;
+  padding: 2%;
+  padding-right: 9%;
+}
+
+.pagelinks:hover{
+  color: #e5d9d6;
+  filter: drop-shadow(2px 2px #7B593F);
+}
+
+.iconStyling:hover{
+  filter: drop-shadow(2px 2px #7B593F);
+}
+
+.searchBar{
+  margin-left: 0.5%;
+  padding: 0.5%;
+  border: none;
+  padding-left: 1%;
+}
+.searchButton{
+  width:3%;
+  padding-left: 0.3%;
+}
+
+.searchBox{
+  padding: 1%;
+  padding-left: 0.5%;
+  background-color: white;
+  border-color: #7B593F;
+  border-width: 2px;
+  border-radius: 15px;
+  margin-left: 5%;
+  margin-right: 2%;
+}
+
+.searchBox:hover{
+  filter: drop-shadow(3px 3px #7B593F);
+}
+
+.dropdownlinks{
+  text-decoration: none;
+  color: #7B593F;
+  padding: 2%;
+  padding-right: 9%;
+}
+
+.dropdowntext {
+  font-size: 16px;
+  color: #7B593F;
+  text-decoration: none;
+}
+
+.dropdown{
+  padding-right: 6%;
+}
+
+.dropdownIcons{
+  width:35%;
+  padding-right: 20%;
+  min-width: 20px;
 }
