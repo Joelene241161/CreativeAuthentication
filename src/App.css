@@ -262,3 +262,46 @@ nav{
   padding-right: 20%;
   min-width: 20px;
 }
+
+footer{
+  background-color: #7B593F;
+  border-radius: 17% 17% 0% 0%;
+}
+
+.footerHeading{
+  padding-left: 13%;
+  padding-right: 10%;
+  padding-top: 10%;
+  font-size: 400%;
+  color: white;
+}
+
+.footerText{
+  padding-left: 13%;
+  padding-top: 5%;
+  padding-right: 20%;
+  font-size: 100%;
+  color: white;
+}
+
+.footerimage{
+  padding-top: 15%;
+  width: 80%;
+  padding-bottom: 10%;
+}
+
+.footerPageLinks{
+  padding-left: 13%;
+  padding-right: 20%;
+  font-size: 100%;
+  color: white;
+}
+
+.footerPageLinks:hover{
+  filter: drop-shadow(2px 2px #54351e);
+}
+
+.marginFooter{
+  margin-left:5%;
+  margin-bottom: 1%;
+}
