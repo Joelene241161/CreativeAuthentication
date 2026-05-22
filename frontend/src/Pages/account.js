@@ -27,7 +27,7 @@ function Account() {
       <div style={{ padding: "20px", textAlign: "center" }}>
         <h3>You are not logged in</h3>
         <p>Please sign in to view your account details.</p>
-        <button onClick={() => window.location.href = "/login"}>Go to Login</button>
+        <Button onClick={() => window.location.href = "/login"}>Go to Login</Button>
       </div>
     );
   }
