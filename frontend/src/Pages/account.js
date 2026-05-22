@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 function Account() {
   // For error prevention
@@ -32,20 +33,19 @@ function Account() {
   }
 
   return (
-    <div style={{ padding: "20px", maxWidth: "400px", margin: "0 auto" }}>
-      <h1>Account Details</h1>
-      <hr />
+    <div style={{ padding: "20px", maxWidth: "400px", margin: "0 auto", marginTop:"5%" }}>
+      <h1 className="m-plus-rounded-1c-bold">Account Details</h1>
       
       <div style={{ marginBottom: "20px" }}>
-        <p><strong>Username:</strong> {user.name}</p>
-        <p><strong>Email:</strong> {user.email || "No email stored"}</p>
-        <p>
+        <p className='inter-regular'><strong>Username:</strong> {user.name}</p>
+        <p className='inter-regular'><strong>Email:</strong> {user.email || "No email stored"}</p>
+        <p className='inter-regular'>
           <strong>Account Type:</strong> {user.userRole === "S" ? "Seller" : "Customer"}
         </p>
       </div>
 
-      <button 
-        onClick={handleLogout}> Log out</button>
+      <Button 
+        onClick={handleLogout}> Log out</Button>
     </div>
   );
 }

@@ -4,11 +4,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from "./Pages/home";
 import Account from "./Pages/account";
-import Product from "./Pages/product";
-import Seller from "./Pages/seller";
 import NavBar from './Components/navbar';
-import Checkout from './Pages/checkout';
-
+import Button from 'react-bootstrap/Button';
 
 function App() {
   
@@ -21,11 +18,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/seller" element={<Seller />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/account" element={<Account />} />
-        <Route path="/checkout" element={<Checkout />} />
       </Routes>
 
     </BrowserRouter>

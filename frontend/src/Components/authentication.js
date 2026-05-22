@@ -152,8 +152,8 @@ const login = async () => {
           <Tab.Content>
             <Tab.Pane eventKey="first">
               
-              <h1 className="m-plus-rounded-1c-bold">Welcome to Deluxe Bookings</h1>
-            <h3 className="LogInSubHeading inter-regular">Make an account to gain access to our exclusive Platform</h3>
+              <h1 className="m-plus-rounded-1c-bold">Welcome!</h1>
+            <h3 className="LogInSubHeading inter-regular">Make an account to gain access to our exclusive platform</h3>
 
       <input
         placeholder="Username"

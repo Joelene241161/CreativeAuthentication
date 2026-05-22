@@ -6,7 +6,6 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Footer from '../Components/footer';
 
 import Authentication from "../Components/authentication";
 
@@ -48,7 +47,6 @@ function LogIn() {
               </div>
           </div>
       </div>
-      <Footer></Footer>
       </div>
   );
 }
