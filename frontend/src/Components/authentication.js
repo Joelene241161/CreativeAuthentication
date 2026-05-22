@@ -105,8 +105,8 @@ const register = async () => {
     }
   };
 
-  const login = async () => {
-    // Combine passwords gained from pictures
+const login = async () => {
+    // Adds the passwords from each picture
     const finalPassword = `${password1}${password2}${password3}`;
 
     try {
@@ -115,9 +115,23 @@ const register = async () => {
         password: finalPassword,
         name
       });
-      setMessage(res.data);
+
+      // Gets the token and user data
+      const { token, user, message: successMessage } = res.data;
+
+      // Save them to local storage
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
+
+      setMessage("Login successful!");
       setPassword(finalPassword);
-    } catch (error) {
+
+      // Redirects the user to home page after delay
+      setTimeout(() => {
+        window.location.href = "/"; 
+      }, 1000);
+
+    }  catch (error) {
       setMessage("Login failed.");
     }
   };

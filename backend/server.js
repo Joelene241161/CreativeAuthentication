@@ -6,7 +6,7 @@ require("dotenv").config();
 const app = express();
 
 const bcrypt = require("bcrypt");
-const User = require("../backend/models/User");
+const User = require("./models/User");
 
 app.use(cors());
 app.use(express.json());

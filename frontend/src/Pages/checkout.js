@@ -13,17 +13,18 @@ function Checkout() {
   const [phone, setPhone] = useState("");
 
   // Payment Form
+  const [cardName, setCardName] = useState("");
   const [cardNumber, setCardNumber] = useState("");
   const [expiry, setExpiry] = useState("");
-  const [cvv, setCvv] = useState("");
+  const [cvc, setCvc] = useState("");
 
   const [message, setMessage] = useState("");
-  const [checkoutPage, setCheckoutPage] = useState(1);
+  // const [checkoutPage, setCheckoutPage] = useState(1);
 
-  const handleNextStep = (e) => {
-    e.preventDefault();
-    setCheckoutPage(2);  // Moves to the payment screen
-  };
+  // const handleNextStep = (e) => {
+  //   e.preventDefault();
+  //   setCheckoutPage(2);  // Moves to the payment screen
+  // };
 
   const formDetails = async () => {
     const res = await axios.post("http://localhost:5000/auth/register", {
@@ -43,12 +44,16 @@ function Checkout() {
   return (
     <div className='checkoutbg'>
 
-        <div className="CheckoutBack">
+      <div className='row'>
+
+        {/* left panel start */}
+
+        <div className="CheckoutBack col">
             <div className="CheckoutBox">
+        
+        {/* <ProgressBar variant="dark" now={checkoutPage === 1 ? 33 : 66} className='progressBar'/> */}
 
-        <ProgressBar variant="dark" now={checkoutPage === 1 ? 33 : 66} className='progressBar'/>
-
-        <h3 className='m-plus-rounded-1c-bold checkoutHeading'>Enter your details:</h3>
+        <h3 className='m-plus-rounded-1c-bold checkoutHeading'>Enter your personal details:</h3>
 
         <form>
 
@@ -119,12 +124,67 @@ function Checkout() {
 
         </div>
         </div>
-        
-        <button className="logInButton inter-regular" type="submit" value="Submit">Continue to payment</button>
+
+          <button className="logInButton inter-regular" type="submit" value="Submit">Finalise details</button>
 
         </form>
 
             </div>
+        </div>
+
+          {/* right panel start */}
+
+        <div className="CheckoutBack col">
+            <div className="CheckoutBox">
+        
+        {/* <ProgressBar variant="dark" now={checkoutPage === 1 ? 33 : 66} className='progressBar'/> */}
+
+        <h3 className='m-plus-rounded-1c-bold checkoutHeading'>Enter your payment details:</h3>
+
+        <form>
+
+        <div className="row">
+        <div className="col-lg-6">
+            <input
+        placeholder="Cardholder's name"
+        onChange={(e) => setCardName(e.target.value)} className='Checkoutinput'
+      />
+        </div>
+
+        <div className="col-lg-6">
+            <input
+        placeholder="Card number"
+        onChange={(e) => setCardNumber(e.target.value)} className='Checkoutinput'
+      />
+        </div>
+
+        </div>
+
+        <div className="row">
+        <div className="col-lg-6">
+            <input
+        placeholder="Expiration date"
+        onChange={(e) => setExpiry(e.target.value)} className='Checkoutinput'
+      />
+        </div>
+
+        <div className="col-lg-6">
+            <input
+        placeholder="CVC"
+        onChange={(e) => setCvc(e.target.value)} className='Checkoutinput'
+      />
+        </div>
+
+        </div>
+
+        
+        <button className="logInButton inter-regular" type="submit" value="Submit">Finalise payment</button>
+
+        </form>
+
+            </div>
+        </div>
+
         </div>
 
         <Footer></Footer>

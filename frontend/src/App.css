@@ -340,19 +340,19 @@ input{
 
 .CheckoutBox {
   background-color: #EFEBEA;
-  margin: 1%;
   padding: 3%;
   border-radius: 15px;
   text-align: center;
-  width: 40%;
+  width: 90%;
   margin-top: 0;
   min-width: 340px;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 .CheckoutBack {
   margin: 3%;
   margin-left: 7%;
-  margin-right: 7%;
   padding-bottom: 2%;
   margin-top: 0;
   filter: drop-shadow(8px 8px 10px);
